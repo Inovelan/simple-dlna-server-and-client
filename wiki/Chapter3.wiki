@@ -1,13 +1,15 @@
-#summary One-sentence summary of this page.
+How to make simple server which can listen a network protocol and process it.
 
 = Introduction =
 
-Add your content here.
-
+In DLNA, there are many network listeners (so called, server).
+So, we need to define the base structure of listener and processer for that. 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Simply, if you want to make a server thread, you need 3 step process.
+
+1. *bold*Make you own network protocol listener.*bold*
+   Network protocol listener should be implemented with com.lgcns.sol.upnp.network.CommonListener.
+   In this class, you should implement "listen" method.
+   For more detail information, refer to the remark of CommonListener class.
