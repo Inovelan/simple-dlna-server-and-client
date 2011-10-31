@@ -12,7 +12,7 @@ Client 부분 개발을 시작으로, Server 파트를 포괄할 계획입니다
 
 = Role =
 
-이동훈 - Gena에 대한 처리 부분을 맞고 있습니다.
-장주연 - Client UI 및 Playback & AVTransport Service를 담당하고 있습니다.
-오자연 - SSDP Message 처리 및 XML 처리 부분과 Utility class를 담당 있습니다.
-박경표 - SOAP Action및 Device 모델링을 담당하고 있습니다.
+ * 이동훈 - Gena에 대한 처리 부분을 맞고 있습니다.
+ * 장주연 - Client UI 및 Playback & AVTransport Service를 담당하고 있습니다.
+ * 오자연 - SSDP Message 처리 및 XML 처리 부분과 Utility class를 담당 있습니다.
+ * 박경표 - SOAP Action및 Device 모델링을 담당하고 있습니다.
