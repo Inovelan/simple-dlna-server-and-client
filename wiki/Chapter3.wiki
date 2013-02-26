@@ -1,9 +1,9 @@
-How to make simple server which can listen a network protocol and process it.
+#summary How to make simple server which can listen a network protocol and process it.
 
 = Introduction =
 
-In DLNA, there are many network listeners (so called, server).
-So, we need to define the base structure of listener and processer for that. 
+In DLNA, there are many network listen handlers such like SOAP server & SSDP server.
+So, we need to define the base structure & sequences of listen handler. 
 
 = Details =
 
