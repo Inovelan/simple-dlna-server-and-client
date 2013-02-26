@@ -1,4 +1,4 @@
-# Goal & Milestone.
+#summary Goal & Milestones
 
 = Goal =
 
