@@ -1,18 +1,17 @@
-# Members & Role.
+# Goal & Milestone.
 
-= Introduction =
+= Goal =
 
-해당 사이트는 현재 4명이 운영하고 있습니다.
+Our project has simple object.
 
-이동훈, 장주연, 오자연, 박경표
+To make simple DLNA server & client module in Java language
+To make sample DLNA app operated in Android Phone.
+Not to use other library except Java SDK (but. It's too hard to follow this rule.)
 
-우리의 목표는, 사용하기 편한 공용화된 DLNA Media Server와
-Client 모듈 개발을 목적으로 하고 있으며, 초기에는 모델링과
-Client 부분 개발을 시작으로, Server 파트를 포괄할 계획입니다.
+= Milestone =
 
-= Role =
-
- * 이동훈 - Gena에 대한 처리 부분을 맞고 있습니다.
- * 장주연 - Client UI 및 Playback & AVTransport Service를 담당하고 있습니다.
- * 오자연 - SSDP Message 처리 및 XML 처리 부분과 Utility class를 담당 있습니다.
- * 박경표 - SOAP Action및 Device 모델링을 담당하고 있습니다.
+2011.06 - To make Simple Core Class
+          such like UPnPService, UPnPDevice & ControlPoint
+2011.08 - To make sample Code
+2013.05 - To Add GENA module.
+2013.06 - To make simple DLNA Android App
