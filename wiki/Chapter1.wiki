@@ -10,8 +10,7 @@ Not to use other library except Java SDK (but. It's too hard to follow this rule
 
 = Milestone =
 
-* 2011.06 - To make Simple Core Class
-          such like UPnPService, UPnPDevice &amp; ControlPoint
+* 2011.06 - To make Simple Core Class such like UPnPService, UPnPDevice ControlPoint
 * 2011.08 - To make sample Code 
 * 2013.05 - To Add GENA module. 
 * 2013.06 - To make simple DLNA Android App 
