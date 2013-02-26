@@ -10,6 +10,6 @@ So, we need to define the base structure & sequences of listen handler.
 Simply, if you want to make a server thread, you need 3 step process.
 
 1. *Make your own network protocol listener.*
-   Network protocol listener should be implemented with com.lgcns.sol.upnp.network.CommonListener.
+   Network protocol listener should be implemented with com.elevenquest.sol.upnp.network.CommonListener.
    In this class, you should implement "listen" method.
    For more detail information, refer to the remark of CommonListener class.
