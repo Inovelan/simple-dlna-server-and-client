@@ -34,8 +34,19 @@ Updater는 Updater Package에서 진행한다.
  - 모든 Updater Class는 공통의 Updater Interface를 상속하여, 
    Start/Stop을 외부에서 Control할 수 있도록 지원해야 하며,
  - Control Point에서 Start/Stop을 할 수 있도록 한다.
- - Updater Instance가 생성할 때, Mapping되는 Model에 Register하여, 
-   Event를 받을 수 있도록 준비를 하여야 한다.
+ - Updater Instance가 생성할 때, Mapping되는 Model에 자신을 등록하여, 
+   Event 통지를 받을 수 있도록 준비를 하여야 한다.
 
 2. Update 시점
- - 해당하는 모델에서 정보 변경 후에, O
+ - 해당하는 모델에서 정보 변경이 발생하면, 이를 위에서 등록한 Listener를
+   통하여, 전파하여야 한다.
+ - 전파된 내용은 Updator Class Instace가 판단하여, 
+ - 외부에서 접속하고, 이를 갱신하여야 한다.
+ - Model에서 전파되는 Transaction을 이용하지 말고, 독립적인 Thread를
+   생성하여, Model 변경 시 지연 또는 멈춤 현상이 일어나게 하면 안된다.
+
+= 실제 Interface =
+
+* SSDP 에서 Device가 수정되는 경우를 위하여, 아래와 같은 작업을 추가
+1. UPnPDevice 변경 내용을 수신하기 위한 기본적인 Listener를 정의
+   IUPnPDeviceListChangeListener
