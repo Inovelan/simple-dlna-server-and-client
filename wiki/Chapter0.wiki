@@ -48,5 +48,24 @@ Updater는 Updater Package에서 진행한다.
 = 실제 Interface =
 
 * SSDP 에서 Device가 수정되는 경우를 위하여, 아래와 같은 작업을 추가
+
 1. UPnPDevice 변경 내용을 수신하기 위한 기본적인 Listener를 정의
    IUPnPDeviceListChangeListener
+2. Updator Class를 생성함
+   DeviceInfoUpdater implements IUPnPDeviceListChangeListener
+3. Updator Class 생성자에서 자체 Thread Queue를 생성
+4. Updator Class 변경 수신자에게는, Thread Queue에 Item을 넣는 역활을 제공
+5. 이후, Updator Class에 있는 내부 Thread에서 동작
+
+* 사용자가 원격 Device에 있는 내용을 사용하는 경우, 
+
+1. UPnPService 이벤트 변경 내용을 수신하기 위한 기본적인 Listener를 정의
+   IUPnPServiceGenaListChangeListener
+  (UPnPDevice의 경우, 등록이 되면, 무조건 갱신이 필요하지만, 
+   UPnPService의 경우, GENA 등록이 되어 있지 않다면, 이후 Subscription 작업이
+   필요하지 않다.)
+2. Updator Class를 생성함
+   SubscribeServiceUpdator implements IUPnPServiceGenaListChangeListener
+3. Updator Class 생성자에서 자체 Thread Queue를 생성
+4. Updator Class 변경 수신자에게는 Thread Queue에 Item을 넣는 역활만 제공
+5. 이후, Updator Class 내부 Thread에서 동작
